@@ -7,6 +7,7 @@
 class UInputMappingContext;
 class UInputAction;
 struct FInputActionValue;
+class IEnemyInterface;
 
 UCLASS()
 class GAS_AURA_API AAuraPlayerController : public APlayerController
@@ -16,10 +17,18 @@ class GAS_AURA_API AAuraPlayerController : public APlayerController
 public:
 	AAuraPlayerController();
 
+	virtual void PlayerTick(float DeltaTime) override;
+
 protected:
 	virtual void BeginPlay() override;
 
 	virtual void SetupInputComponent() override;
+
+private:
+	void CursorTrace();
+
+	IEnemyInterface* LastActor;
+	IEnemyInterface* ThisActor;
 
 private:
 	UPROPERTY(EditAnyWhere, Category = "Input")
