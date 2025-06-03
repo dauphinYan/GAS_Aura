@@ -27,8 +27,8 @@ protected:
 private:
 	void CursorTrace();
 
-	IEnemyInterface* LastActor;
-	IEnemyInterface* ThisActor;
+	TObjectPtr<IEnemyInterface> LastActor;
+	TObjectPtr<IEnemyInterface> ThisActor;
 
 private:
 	UPROPERTY(EditAnyWhere, Category = "Input")
