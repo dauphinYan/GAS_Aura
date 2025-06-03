@@ -7,3 +7,8 @@ void UAuraWidgetController::SetWidgetControllerParam(const FWidgetControllerPara
 	AbilitySystemComponent = WCParams.AbilitySystemComponent;
 	AttributeSet = WCParams.AttributeSet;
 }
+
+void UAuraWidgetController::BroadcastInitialValues()
+{
+
+}
